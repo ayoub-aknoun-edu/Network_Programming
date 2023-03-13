@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.exemple.clientchatjavafx.ClientChatController">
+   <top>
+      <HBox fx:id="connectionHbox" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="35.0" text="Host:" textAlignment="CENTER" wrapText="true">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="hostTxt" promptText="host" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="17.0" prefWidth="35.0" text="Port:" textAlignment="CENTER" wrapText="true">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="portTxt" layoutX="45.0" layoutY="10.0" promptText="port" />
+            <Button fx:id="connectBtn" mnemonicParsing="false" text="connect" textOverrun="CENTER_ELLIPSIS">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin></Button>
+            <Button fx:id="deconnectBtn" layoutX="420.0" layoutY="30.0" mnemonicParsing="false" text="decconnect" textOverrun="CENTER_ELLIPSIS">
+               <HBox.margin>
+                  <Insets left="4.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </HBox>
+   </top>
+   <center>
+      <ScrollPane fx:id="sp_main" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </BorderPane.margin>
+         <content>
+            <VBox fx:id="vbox_message" prefHeight="200.0" prefWidth="100.0" />
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <HBox fx:id="hbox_texting" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="tf_message" prefHeight="35.0" prefWidth="501.0" style="-fx-background-radius: 5;" />
+            <Button fx:id="button_send" mnemonicParsing="false" prefHeight="35.0" prefWidth="50.0" style="-fx-background-radius: 5;" text="send">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>
