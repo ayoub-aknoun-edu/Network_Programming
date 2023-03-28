@@ -18,7 +18,7 @@ def start_client():
     req = ""
     while req.lower().strip()!= 'exit':
         req = input('')
-        client_socket.send(req.encode())
+        client_socket.send(req.encode()+b'\n')
     listen = False
     client_socket.close()
 
